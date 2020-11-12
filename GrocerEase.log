@@ -1,0 +1,12 @@
+2022-11-12 09:13:46 DEBUG root:27 - Program started
+2022-11-12 09:13:46 DEBUG root:75 - Importing from 'ListStorage\Camping.txt'
+2022-11-12 09:13:46 DEBUG root:75 - Importing from 'ListStorage\Thanksgiving.txt'
+2022-11-12 09:14:33 DEBUG root:13 - Invalid input: 3.50asdf
+2022-11-12 09:14:38 DEBUG root:13 - Invalid input: adfas
+2022-11-12 09:14:38 DEBUG root:13 - Invalid input:
+2022-11-12 09:15:32 DEBUG root:13 - Invalid input:
+2022-11-12 09:15:55 DEBUG root:18 - Created item 'Frosted Flakes' in list 'Camping'
+2022-11-12 09:16:46 DEBUG root:17 - Deleted item 'Frosted Flakes' from list 'Camping'
+2022-11-12 09:17:45 DEBUG root:18 - Created item 'Hamburgers' in list 'My New List'
+2022-11-12 09:18:56 DEBUG root:75 - Importing from 'ImportExport\Back To School.txt'
+2022-11-12 09:19:23 DEBUG root:80 - Program ended

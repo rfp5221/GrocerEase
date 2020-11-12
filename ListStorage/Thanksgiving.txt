@@ -1,0 +1,3 @@
+Thanksgiving
+Cheese,1.5,1.0,LB
+Eggs,3.25,1.0,CARTON

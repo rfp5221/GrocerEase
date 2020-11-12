@@ -1,0 +1,2 @@
+My New List
+Hamburgers,2.3,1.0,LB
