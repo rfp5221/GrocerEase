@@ -42,7 +42,7 @@ public class ShoppingListMaintenance {
   }
 
   public static boolean exportList(ShoppingList shoppingList, String fullPath) {
-    // TODO 02 - Put this in when Phil publishes it. I have done so already. -Nick Guenther.
+    // TODO 02 - Put this in when Phil publishes it. I have done so already. -Nick Guenther
     // Nick Guenther (nwg5171@psu.edu; github: nwg5171)
 
     try {
@@ -67,8 +67,12 @@ public class ShoppingListMaintenance {
 
   }
 
+  public static ShoppingList importList(String filePath) {
+    return importList(Paths.get(filePath));
+  }
+
   public static ShoppingList importList(Path filePath) {
-    // TODO 03 - Put this in when Phil publishes it. I have done so already. -Nick Guenther.
+    // TODO 03 - Put this in when Phil publishes it. I have done so already. -Nick Guenther
     // Nick Guenther (nwg5171@psu.edu; github: nwg5171)
 
     ShoppingList newShoppingList = new ShoppingList();
@@ -98,5 +102,16 @@ public class ShoppingListMaintenance {
 
   }
 
+  public static void loadListsFromStorage(ShoppingListBank bank) {
+    try (Stream<Path> paths = Files.walk(Paths.get("ListStorage")).filter(Files::isRegularFile)) {
+      paths.forEach(p -> {
+        System.out.printf("Restoring list from '%s/%s'%n", p.getParent(), p.getFileName());
+        bank.addShoppingList(importList(p));
+      });
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+  }
 
 }
