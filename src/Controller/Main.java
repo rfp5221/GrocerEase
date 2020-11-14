@@ -16,11 +16,14 @@ public class Main {
 
   public static void printTeamInfo() {
     // TODO 00 - Put your team info here
-    System.out.println("Team Number: X");
-    System.out.println("Jo Student (email: jxs5123@psu.edu; github: jstu)");
-    System.out.println("James Gosling (email: jag5789@psu.edu; github: java_guru)");
+    // Nick Guenther (nwg5171@psu.edu; github: nwg5171)
+    System.out.println("Team Number: 5");
+    System.out.println("Alexander Alekseev (email: aza5975@psu.edu; github: aza5975)");
+    System.out.println("Nickolas Guenther (email: nwg5171@psu.edu; github: nwg5171)");
+    System.out.println("Yihang Liu (email: yvl5590@psu.edu; github: yihang314)");
+    System.out.println("Rush Patel (email: rfp5221@psu.edu; github: rfp5221)");
     System.out.println("Course: IST 261");
-    System.out.println("Assignment: TD0X");
+    System.out.println("Assignment: TD03");
   }
 
   public static void main(String[] args) {
