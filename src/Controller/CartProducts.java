@@ -17,6 +17,10 @@ public class CartProducts {
         break;
       }
       // TODO 04 - Add the missing line in Controller.CartProducts.cartProducts
+      else {
+        product.setInCart(true);
+      }
+
     }
 
 
