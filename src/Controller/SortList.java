@@ -31,6 +31,8 @@ public class SortList {
      */
 
     // TODO 07 - Controller.SortList.sortList: Add code for the sort direction (ascending/descending)
+    // Nick Guenther (nwg5171@psu.edu; github: nwg5171)
+    // Yihang Liu (yvl5590@psu.edu; github: yihang314)
 
     Menu menuSortDirection = new Menu("Sort Direction");
 
