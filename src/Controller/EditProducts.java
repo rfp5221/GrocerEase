@@ -21,6 +21,7 @@ public class EditProducts {
     MenuChoice mcEditUom = menu.addMenuChoice("");
     MenuChoice mcEditPrice = menu.addMenuChoice("");
     // TODO 06 - Controller.EditProducts.editOneProduct: handle quantity, uom, and price
+    //Alexander Alekseev (aza5975@psu.edu)
 
     MenuDisplay menuDisplay = new MenuDisplay(menu);
     while (true) {
