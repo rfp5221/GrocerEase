@@ -22,9 +22,10 @@ public class AddProducts {
       }
       else{
         EditProducts.editOneProduct( product );
-        //product.setName( IOHelper.readNonBlankStringFromKeyboard( "Name" ) );
+
       }
       shoppingList.addProduct( product );
+      break;
     }
 
   }
