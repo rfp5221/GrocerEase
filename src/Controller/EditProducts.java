@@ -3,6 +3,7 @@ package Controller;
 import Model.Obj;
 import Model.Product;
 import Model.ShoppingList;
+import Model.UnitOfMeasure;
 import View.IOHelper;
 import edu.psu.consolemenu.Menu;
 import edu.psu.consolemenu.MenuChoice;
@@ -23,6 +24,7 @@ public class EditProducts {
     // TODO 06 - Controller.EditProducts.editOneProduct: handle quantity, uom, and price
     //Alexander Alekseev (aza5975@psu.edu)
 
+
     MenuDisplay menuDisplay = new MenuDisplay(menu);
     while (true) {
       mcEditName.setText("Name: " + Obj.coalesce(product.getName(), "<not set>"));
@@ -39,11 +41,12 @@ public class EditProducts {
         product.setName(IOHelper.readNonBlankStringFromKeyboard("Name"));
       }else if (menuChoice == mcEditQuantity){
       product.setQuantity(IOHelper.userInputInt("Quantity"));
-    }//else if (menuChoice == mcEditUom) {
-    //product.setUom();
-    else if (menuChoice == mcEditPrice){
+    }else if (menuChoice == mcEditUom) {
+        product.setUom(UnitOfMeasure.valueOf(IOHelper.readNonBlankStringFromKeyboard("UoM")));
+      }else if (menuChoice == mcEditPrice){
       product.setPrice(IOHelper.userInputDouble("Price"));
     }
+
     }
   }
 }
