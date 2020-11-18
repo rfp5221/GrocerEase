@@ -9,6 +9,8 @@ import edu.psu.consolemenu.Menu;
 import edu.psu.consolemenu.MenuChoice;
 import edu.psu.consolemenu.MenuDisplay;
 
+import java.lang.reflect.Executable;
+
 public class EditProducts {
   public static void editProducts(ShoppingList shoppingList) {
     Product product = ChooseProduct.chooseProduct(shoppingList, p -> p.getName());
@@ -42,7 +44,18 @@ public class EditProducts {
       }else if (menuChoice == mcEditQuantity){
       product.setQuantity(IOHelper.userInputInt("Quantity"));
     }else if (menuChoice == mcEditUom) {
-        product.setUom(UnitOfMeasure.valueOf(IOHelper.readNonBlankStringFromKeyboard("UoM")));
+        boolean pass = true;
+        while(pass = true) {
+          try {
+            product.setUom(UnitOfMeasure.valueOf(IOHelper.readNonBlankStringFromKeyboard("UOM (EA/GAL/LB/BAG/BOX/CARTON)")));
+            pass = false;
+            break;
+          } catch (Exception e) {
+            pass = true;
+            System.out.println("Enter a valid value!");
+            System.out.println();
+          }
+        }
       }else if (menuChoice == mcEditPrice){
       product.setPrice(IOHelper.userInputDouble("Price"));
     }
