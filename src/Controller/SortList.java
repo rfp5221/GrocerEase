@@ -24,19 +24,39 @@ public class SortList {
     if (sortByChoice == menuSortBy.getMenuChoiceQuit()) {
       return;
     }
+
     ShoppingListSort.ProductSortBy productSortBy = (ShoppingListSort.ProductSortBy) sortByChoice.getObject();
-
-
     /*
      * Sort direction
      */
+
     // TODO 07 - Controller.SortList.sortList: Add code for the sort direction (ascending/descending)
-    // This line is here just so the code compiles.  You need to set it similarly to how sort-by was set
-    ShoppingListSort.ProductSortDirection productSortDirection = ShoppingListSort.ProductSortDirection.ASCENDING;
+    // Nick Guenther (nwg5171@psu.edu; github: nwg5171)
+    // Yihang Liu (yvl5590@psu.edu; github: yihang314)
+
+    Menu menuSortDirection = new Menu("Sort Direction");
+
+    MenuChoice sortAscending = menuSortDirection.addMenuChoice("Ascending");
+    sortAscending.setObject(ShoppingListSort.ProductSortDirection.ASCENDING);
+
+    MenuChoice sortDescending = menuSortDirection.addMenuChoice("Descending");
+    sortDescending.setObject(ShoppingListSort.ProductSortDirection.DESCENDING);
+
+    MenuDisplay menuDisplaySortDirection = new MenuDisplay(menuSortDirection);
+    MenuChoice sortByDirection = menuDisplaySortDirection.displayAndChoose();
+
+
+    if (sortByDirection == menuSortDirection.getMenuChoiceQuit()) {
+      return;
+    }
+
+    ShoppingListSort.ProductSortDirection productSortDirection = (ShoppingListSort.ProductSortDirection) sortByDirection.getObject();
+
 
     /*
      * Do the sort
      */
+
     ShoppingListSort shoppingListSort = new ShoppingListSort(productSortBy, productSortDirection);
 
     shoppingList.sortList(shoppingListSort);

@@ -23,7 +23,7 @@ public class Main {
     System.out.println("Yihang Liu (email: yvl5590@psu.edu; github: yihang314)");
     System.out.println("Rush Patel (email: rfp5221@psu.edu; github: rfp5221)");
     System.out.println("Course: IST 261");
-    System.out.println("Assignment: TD03");
+    System.out.println("Assignment: TD04");
   }
 
   public static void main(String[] args) {
