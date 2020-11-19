@@ -1,9 +1,14 @@
 package Controller;
 
+import Model.Obj;
 import Model.Product;
 import Model.ShoppingList;
 
+import Model.UnitOfMeasure;
 import View.IOHelper;
+import edu.psu.consolemenu.Menu;
+import edu.psu.consolemenu.MenuChoice;
+import edu.psu.consolemenu.MenuDisplay;
 import org.apache.log4j.*;
 
 public class AddProducts {
@@ -13,20 +18,21 @@ public class AddProducts {
 
   public static void addProducts(ShoppingList shoppingList) {
     // TODO 05 - Write Controller.AddProducts.addProducts (Hint: this can be done in 6 lines)
+    // Yihang Liu (email: yvl5590@psu.edu; github: yihang314)
     // Rushi Patel (rfp5221@psu.edu; github:rfp5221)
 
-    while(true){
+    String userInput = "Y";
+
+    while(userInput.equals("Y")){
       Product product = new Product();
       if(product == null){
         break;
       }
       else{
-        EditProducts.editOneProduct( product );
-
+        EditProducts.editOneProduct(product);
       }
       shoppingList.addProduct( product );
-      break;
+      userInput = IOHelper.strUserInputYorN("Another product?");
     }
-
   }
 }
