@@ -18,8 +18,10 @@ public class CartProducts {
       }
       // TODO 04 - Add the missing line in Controller.CartProducts.cartProducts
       // Nick Guenther (nwg5171@psu.edu; github: nwg5171)
-      else {
-        product.setInCart(true);
+      if (product.getInCart()){
+        shoppingList.removeFromCart(product);
+      } else {
+        shoppingList.putInCart(product);
       }
 
     }
