@@ -28,7 +28,7 @@ public class AddProducts {
 
     String userInput = "Y";
 
-    while(userInput.equals("Y")){
+    while(userInput.equals("Y") || userInput.equals("y")){
       Product product = new Product();
       if(product == null){
         break;
@@ -37,8 +37,8 @@ public class AddProducts {
         EditProducts.editOneProduct(product);
       }
       shoppingList.addProduct(product);
-      logger.debug("Item Added: " + product.getName());
-      userInput = IOHelper.strUserInputYorN("Another product?");
+      logger.debug("Created item '" + product.getName() + "' in list '" + shoppingList.getName() + "'");
+      userInput = IOHelper.readYN("Another product?");
     }
   }
 }

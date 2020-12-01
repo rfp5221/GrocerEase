@@ -17,7 +17,7 @@ public class DeleteProducts {
         break;
       }
       shoppingList.removeProduct(product);
-      logger.debug("Product deleted: " + product.getName());
+      logger.debug("Deleted item '" + product.getName() + "' from list '" + shoppingList.getName() + "'");
     }
   }
 }

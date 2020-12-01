@@ -25,12 +25,15 @@ public class ImportExport {
      */
 
     //setup the path and file name base on the list name
-    String filePath = baseFolder + "/" + shoppingList.getName() + ".txt";
+    String fileName = shoppingList.getName();
+    String fileNameLowerCase = fileName.toLowerCase();
+    String fileNameFormatted = fileNameLowerCase.replaceAll(" ", "_");
+    String filePath = baseFolder + "/" + fileNameFormatted + ".txt";
 
 
     if (ShoppingListMaintenance.exportList(shoppingList, filePath) == true) {
       System.out.println("File Name (will write to 'ImportExport' folder in project): "
-              + shoppingList.getName() + ".txt");
+              + fileNameFormatted + ".txt");
 
     } else {
       System.out.println("File already existed");
